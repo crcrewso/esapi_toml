@@ -1,0 +1,113 @@
+# This is the default sample TOML file for a single environment. If you have multiple aria environments there would be a uniuqe file for each environment.
+
+site = "My Hospital"
+
+[global]
+log = "C:/temp/logs/hospital.log"
+log_level = "info"
+log_format = "text"
+script_dir = "C:/temp/scripts"
+
+[machines]
+# This is a list of machines that are in the hospital
+# Each machine has a name, a type, and a list of tags
+
+[machines.variansample]
+name = "Varian TrueBeam"
+id = "variansample"
+type = "Varian"
+model = "TrueBeam"
+photons = ["6X", "10X", "15X"]
+electrons = ["6E", "9E", "12E"]
+fff = ["6X-FFF", "10X-FFF"]
+tags = ["Varian", "TrueBeam", "FFF"]
+mlc = "HD-MLC"
+
+[machines.ix]
+type = "Varian"
+name = "Varian IX"
+id = "ix"
+model = "IX"
+photons = ["6X", "15X"]
+mlc = "Millennium 120"
+tags = ["Varian", "IX"]
+
+[machines.elektasample]
+type = "Elekta"
+name = "Elekta Versa HD"
+id = "elektasample"
+model = "Versa HD"
+photons = ["6X", "10X", "15X"]
+electrons = ["6E", "9E", "12E"]
+fff = ["6X-FFF", "10X-FFF"]
+tags = ["Elekta", "Versa HD", "FFF"]
+mlc = "Agility"
+
+[servers]
+# This is a list of Aria servers that are in the hospital
+# Each server has a name, a type, and a list of tags
+[servers.platformportal]
+hostname = "platformportal.tld"
+ip = "10.0.0.1"
+type = "VM"
+tags = ["Aria", "Platform Portal"]
+
+[servers.storage]
+hostname = "storage.tld"
+ip = "10.0.0.2"
+hostname = "storage.tld"
+type = "VM"
+tags = ["Aria", "Storage"]
+
+[servers.ariadatabase]
+hostname = "ariadatabase.tld"
+ip = "10.0.0.3"
+type = "VM"
+tags = ["Aria", "Database"]
+
+[servers.aura]
+hostname = "aura.tld"
+ip = "10.0.0.4"
+type = "VM"
+tags = ["Aria", "Aura"]
+
+[servers.ariaweb]
+hostname = "ariaweb.tld"
+ip = "10.0.0.5"
+type = "VM"
+tags = ["Aria", "Web"]
+
+[servers.fas1]
+hostname = "fas1.tld"
+ip = "10.0.1.1"
+type = "physical"
+model = "Dell PowerEdge R740"
+gpuequipped = true
+tags = ["Aria", "FAS"]
+
+[servers.fas2]
+hostname = "fas2.tld"
+ip = "10.0.1.2"
+type = "physical"
+model = "Dell PowerEdge R730"
+gpuequipped = false
+tags = ["Aria", "FAS"]
+
+[workstations]
+# This is a list of physical workstations that are in the hospital
+# Each workstation has a name, a type, and a list of tags
+[workstations.physicist1]
+hostname = "physicist1.tld"
+ip = "10.0.2.1"
+type = "physical"
+model = "Dell Precision 5820"
+gpuequipped = true
+tags = ["Aria", "Physicist"]
+
+[workstations.dosimetrist]
+hostname = "dosimetrist.tld"
+ip = "10.0.2.2"
+type = "physical"
+model = "Dell Precision 5820"
+gpuequipped = true
+tags = ["Aria", "Dosimetrist"]

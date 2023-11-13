@@ -1,0 +1,9 @@
+﻿# This is the default sample TOML file for a single environment. If you have multiple aria environments there would be a uniuqe file for each environment.
+
+site = "My Hospital"
+
+[global]
+log = "C:/temp/logs/hospital.log"
+log_level = "info"
+log_format = "text"
+script_dir = "C:/temp/scripts"

@@ -1,0 +1,39 @@
+﻿#settings in this file override global settings in TestApp1.toml
+#if setting is commented out or not used in this file, global setting is used
+
+[TBI]
+
+equidistant_iso = false
+iso_spacing_limit = 37.5
+collimator_rot = [3.0,357.0,87.0,93.0]
+
+[TBI.iso1]
+name = "head"
+beams = 3
+technique = "VMAT"
+
+[TBI.iso2]
+name = "thorax"
+beams = 3
+technique = "VMAT"
+
+[TBI.iso3]
+name = "pelvis"
+beams = 3
+technique = "VMAT"
+
+[TBI.iso4]
+name = "Suplegs"
+beams = 2
+technique = "POP"
+
+[TBI.iso5]
+name = "InfLegs"
+beams = 2
+technique = "POP"
+
+[TBI.iso6]
+name = "feet"
+beams = 2
+technique = "POP"
+

@@ -1,0 +1,19 @@
+﻿[global]
+app = TestApp1
+documentation = "../docs/TestApp1"
+log = "../logs/TestApp1.log"
+log_level = DEBUG
+
+[options]
+debug = True
+calc_model = "AAA_15605"
+opti_model = "PO_15605"
+calc_use_gpu = False
+opti_use_gpu = False
+opti_restart = MR3
+
+
+
+
+
+
